@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Голосование за фреймворк</title>
+</head>
+<body>
+    <h1>Голосование за лучший фреймворк</h1>
+    <form method="POST">
+        <label>
+            <input type="radio" name="framework" value="Flask" required> Flask
+        </label><br>
+        <label>
+            <input type="radio" name="framework" value="Django"> Django
+        </label><br>
+        <label>
+            <input type="radio" name="framework" value="FastAPI"> FastAPI
+        </label><br><br>
+        <button type="submit">Проголосовать</button>
+    </form>
+
+    <h2>Результаты голосования:</h2>
+    <ul>
+        <li>Flask: {{ votes["Flask"] }}</li>
+        <li>Django: {{ votes["Django"] }}</li>
+        <li>FastAPI: {{ votes["FastAPI"] }}</li>
+    </ul>
+</body>
+</html>
